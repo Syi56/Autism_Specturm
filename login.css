@@ -1,0 +1,158 @@
+
+
+
+.parent {
+  min-height: 100vh;
+ background-image: url("img/login_page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+section .signin {
+  width: 90%;
+  background: rgba(215, 213, 213, 0.6);
+  padding: 10px 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+}
+section .signin .content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+section .signin .content h2 {
+  font-size: 2em;
+  color: #3280c2;
+  text-transform: uppercase;
+}
+section .signin .content .form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+section .signin .content .form .inputBox {
+  position: relative;
+  display: flex;
+  min-width: 100%;
+}
+section .signin .content .form .inputBox input {
+  position: relative;
+  width: 100%;
+  background: #ffffff4b;
+  outline: none;
+  padding: 30px 10px 7.5px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 1.1em;
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+section .signin .content .form .inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #000;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+section .signin .content .form .inputBox i::after {
+  content: attr(data-end);
+  color: red;
+}
+
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #9d9a9a;
+}
+.signin .content .form .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.signin .content .form .links a {
+  color: #000;
+  text-decoration: none;
+}
+.signin .content .form .links a:nth-child(2) {
+  color: #3280c2;
+  font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"] {
+  padding: 10px;
+  background: #3280c2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+.signin .content .form .inputBox input[type="submit"]:hover {
+  background: #4a9cd6;
+}
+input[type="submit"]:active {
+  opacity: 0.6;
+}
+
+
+
+/* Small Srceen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  section .signin {
+  width: 90%;
+  background: rgba(215, 213, 213, 0.6);
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+}
+  section .signin .content .form .inputBox {
+    min-width: 48%;
+  }
+  
+  
+}
+
+/* Medium Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  section .signin .content .form .inputBox {
+    min-width: 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170;
+  }
+  section .signin .content .form .inputBox {
+    min-width: 48%;
+  }
+}
